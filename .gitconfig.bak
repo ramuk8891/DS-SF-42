@@ -1,0 +1,2335 @@
+# This is Git's per-user configuration file.
+[user]fter doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git merge -m "merging class 02 materials" upstream/master
+Merge made by the 'recursive' strategy.
+ .../INCLASS-iteration-control-flows-functions.ipynb                       | 1085 ++++++
+ classes/02/datasets/dataset-02-bistro.csv                                 |  245 ++
+ classes/02/datasets/dataset-02-zillow-starter.csv                         | 1001 ++++++
+ .../notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb  | 6135 +++++++++++++++++++++++++++++++++
+ classes/02/notebooks/assignment-02-the-pandas-library-starter-code.ipynb  |  534 +++
+ classes/02/notebooks/codealong-02-the-pandas-library-starter-code.ipynb   | 1686 +++++++++
+ classes/02/slides/slides-02-pandas.pdf                                    |  Bin 0 -> 725491 bytes
+ classes/03/datasets/dataset-04-advertising-starter.csv                    |  201 ++
+ classes/03/datasets/dataset-04-zillow.csv                                 | 1001 ++++++
+ .../03/notebooks/assignment-03-exploratory-data-analysis-answer-key.ipynb |  714 ++++
+ .../notebooks/assignment-03-exploratory-data-analysis-starter-code.ipynb  |  332 ++
+ .../03/notebooks/codealong-03-exploratory-data-analysis-answer-key.ipynb  | 5002 +++++++++++++++++++++++++++
+ .../notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb   | 1139 ++++++
+ classes/03/slides/slides-03-statistics-fundamentals.pdf                   |  Bin 0 -> 677288 bytes
+ 14 files changed, 19075 insertions(+)
+ create mode 100644 classes/01/notebooks/python-iteration_control_functions-lesson/INCLASS-iteration-control-flows-functions.ipynb
+ create mode 100755 classes/02/datasets/dataset-02-bistro.csv
+ create mode 100755 classes/02/datasets/dataset-02-zillow-starter.csv
+ create mode 100644 classes/02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+ create mode 100644 classes/02/notebooks/assignment-02-the-pandas-library-starter-code.ipynb
+ create mode 100644 classes/02/notebooks/codealong-02-the-pandas-library-starter-code.ipynb
+ create mode 100644 classes/02/slides/slides-02-pandas.pdf
+ create mode 100644 classes/03/datasets/dataset-04-advertising-starter.csv
+ create mode 100755 classes/03/datasets/dataset-04-zillow.csv
+ create mode 100644 classes/03/notebooks/assignment-03-exploratory-data-analysis-answer-key.ipynb
+ create mode 100644 classes/03/notebooks/assignment-03-exploratory-data-analysis-starter-code.ipynb
+ create mode 100644 classes/03/notebooks/codealong-03-exploratory-data-analysis-answer-key.ipynb
+ create mode 100644 classes/03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+ create mode 100644 classes/03/slides/slides-03-statistics-fundamentals.pdf
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ pwd
+/Users/Shantanu/Desktop/DS-SF-42
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ l
+total 32
+-rw-r--r--  1 Shantanu  staff  2266 Jan 23 18:10 README.md
+drwxr-xr-x  5 Shantanu  staff   170 Jan 23 18:14 classes
+-rw-r--r--  1 Shantanu  staff  5708 Jan 16 20:20 project-examples.md
+-rw-r--r--  1 Shantanu  staff  3917 Jan 16 20:20 project.md
+drwxr-xr-x  3 Shantanu  staff   102 Jan 16 20:20 unit-project
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ cd classes
+Shantanus-MacBook-Pro-2:classes Shantanu$ l
+total 0
+drwxr-xr-x  5 Shantanu  staff  170 Jan 16 20:20 01
+drwxr-xr-x  5 Shantanu  staff  170 Jan 23 18:14 02
+drwxr-xr-x  5 Shantanu  staff  170 Jan 23 18:14 03
+Shantanus-MacBook-Pro-2:classes Shantanu$ history
+    1  cd
+    2  l
+    3  ls -ltr
+    4  alias l 'ls -ltr'
+    5  alias 'ls -ltr' l
+    6  alias l "ls -ltr"
+    7  alias l="ls -ltr"
+    8  l
+    9  l
+   10  cd Pictures
+   11  l
+   12  history
+   13  ..
+   14  cd
+   15  l
+   16  cd Downloads
+   17  l
+   18  cd /private/var/vm
+   19  cd /sleepimage
+   20  ls -ltr
+   21  cd sleepimage
+   22  rm sleepimage
+   23  cd
+   24  ls -ltr
+   25  cd library
+   26  l
+   27  alias l "-ls ltr"
+   28  alias l="-ls ltr"
+   29  l
+   30  alias l='-ls ltr'
+   31  l
+   32  -ls ltr
+   33  cd
+   34  l
+   35  l
+   36  -ls ltr
+   37  cd
+   38  alias l='ls -ltr'
+   39  l
+   40  du -sh
+   41  l
+   42  du -sh -h
+   43  du -sh Shantanu
+   44  du -sh Library
+   45  du -sh *
+   46  cd Pictures
+   47  l
+   48  du -sh *
+   49  ..
+   50  l
+   51  cd
+   52  l
+   53  cd music
+   54  du -sh *
+   55  cd itunes
+   56  l
+   57  du -sh *
+   58  cd Itunes Media
+   59  cd iTunes Media
+   60  less iTunes Media
+   61  less iTunesMedia
+   62  l
+   63  cd iTunes Media
+   64  cd
+   65  du -h --max-depth=1 | sort -hr
+   66  sort --help
+   67  ls -ltr
+   68  st -dh *
+   69  du -sh *
+   70  st -dh *
+   71  du -sh *
+   72  cd Library
+   73  l
+   74  alias l='ls -ltr'
+   75  l
+   76  du -sh *
+   77  cd containers
+   78  l
+   79  du -sh *
+   80  l
+   81  du -sh *
+   82  cd library
+   83  du -sh *
+   84  ipython notebook
+   85  /Users/Shantanu/anaconda2/bin/jupyter_mac.command ; exit;
+   86  git
+   87  git
+   88  sudo mv /usr/bin/git /usr/bin/git-system
+   89  cd /usr/bin
+   90  ls -l
+   91  clear
+   92  git
+   93  git
+   94  clear
+   95  ls -l
+   96  pwd
+   97  cd ~
+   98  pwd
+   99  l s0l
+  100  ls -l
+  101  alias l="ls -l"
+  102  l
+  103  ls
+  104  open .
+  105  cd Desktop
+  106  pwd
+  107  clear
+  108  mkdir USA
+  109  pwd
+  110  l
+  111  ls
+  112  pwd
+  113  l
+  114  pwd
+  115  l
+  116  mkdir west_coast
+  117  mv west_coast USA
+  118  cd USA
+  119  pwd
+  120  l
+  121  cd ..
+  122  pwd
+  123  cd USA
+  124  pwd
+  125  l
+  126  mkdir east_coast south_west mid_west south
+  127  l
+  128  ls
+  129  clear
+  130  ls
+  131  mkdir west_coast/san_francisco
+  132  mkdir west_coast/LA
+  133  cd west_coast/LA/
+  134  pwd
+  135  touch echo_park.txt hollywood.txt south_central.txt
+  136  l
+  137  cd ..
+  138  l
+  139  cd ..
+  140  l
+  141  tree
+  142  pwd
+  143  mkdir east_coast/Boston east_coast/NYC east_coast/hartford
+  144  l
+  145  cd east_coast/
+  146  l
+  147  cd ..
+  148  l
+  149  cd east_coast/
+  150  l
+  151  touch Boston/north_end.txt Boston/back_bay.txt
+  152  pwd
+  153  cd Boston/
+  154  l
+  155  tree
+  156  pwd
+  157  cd ...
+  158  cd ..
+  159  cd ..
+  160  pwd
+  161  l
+  162  mkdir east_coast/Nashville
+  163  l
+  164  cd east_coast/
+  165  l
+  166  pwd
+  167  cd ..
+  168  l
+  169  cd east_coast/Nashville/ south
+  170  l
+  171  mv east_coast/Nashville/ south
+  172  pwd
+  173  cd ..
+  174  cd ..
+  175  l
+  176  cd east_coast/
+  177  l
+  178  cd ..
+  179  l
+  180  mv east_coast/Nashville south
+  181  cd south
+  182  l
+  183  cd ..
+  184  pwd
+  185  l
+  186  cd east_coast/
+  187  l
+  188  cd hartford/
+  189  l
+  190  cd ..
+  191  l
+  192  cd ..
+  193  pwd
+  194  l
+  195  git init
+  196  clear
+  197  git status
+  198  git add east_coast/ west_coast/
+  199  git status
+  200  git commit -m "our very first USA commit"
+  201  git status
+  202  git log
+  203  l
+  204  mkdir mid_west/chicago
+  205  touch mid_west/chicago/southside.txt
+  206  pwd
+  207  cd mid_west/
+  208  l
+  209  cd chicago/
+  210  l
+  211  less southside.txt 
+  212  pwd
+  213  cd ../..
+  214  l
+  215  pwd
+  216  touch south/Nashville/imaginary_neighborhood.txt
+  217  git status
+  218  git add .
+  219  git status
+  220  git commit -m "midwest and south neighborhoods"
+  221  git log
+  222  git checkout 020ae507383050d0fca9550b3cc88a057a64e34d
+  223  pwd
+  224  l
+  225  git checkout master
+  226  l
+  227  cd mid_west/
+  228  l
+  229  cd chicago/
+  230  l
+  231  cd ../..
+  232  l
+  233  clear
+  234  cd ~
+  235  l
+  236  cd Desktop/
+  237  l
+  238  git clone https://github.com/ramuk8891/DS-SF-42
+  239  l
+  240  cd DS-SF-42/
+  241  rm https://github.com/ramuk8891/DS-SF-42
+  242  rm DSC02383.jpg
+  243  l
+  244  pwd
+  245  cd ..
+  246  l
+  247  rm DSC02383.jpg
+  248  l
+  249  cd DS-SF-42/
+  250  l
+  251  clear
+  252  cd pwd
+  253  pwd
+  254  l
+  255  jupyter notebook
+  256  jupyter notebook
+  257  pwd
+  258  l
+  259  pwd
+  260  jupyter notebook
+  261  jupyter notebook
+  262  pwd
+  263  jupyter notebook
+  264  jupyter notebook
+  265  pwd
+  266  pwd
+  267  git status
+  268  ls -l
+  269  git add -A
+  270  git status
+  271  git commit -m "uploading class 1 files"
+  272  git push
+  273  git push
+  274  git log
+  275  clear
+  276  git push -f origin master
+  277  pwd
+  278  git remote add upstream https://github.com/ga-students/DS-SF-42.git
+  279  git fetch upstream master
+  280  git checkout upstream/master README.md
+  281  git add
+  282  pwd
+  283  l
+  284  git log
+  285  git add .
+  286  git commit -m "updated version of readme"
+  287  git merge -m "merging class 02 materials" upstream/master
+  288  pwd
+  289  l
+  290  cd classes
+  291  l
+  292  history
+Shantanus-MacBook-Pro-2:classes Shantanu$ pwd
+/Users/Shantanu/Desktop/DS-SF-42/classes
+Shantanus-MacBook-Pro-2:classes Shantanu$ cd ..
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ pwd
+/Users/Shantanu/Desktop/DS-SF-42
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git remote -v
+origin	https://github.com/ramuk8891/DS-SF-42 (fetch)
+origin	https://github.com/ramuk8891/DS-SF-42 (push)
+upstream	https://github.com/ga-students/DS-SF-42.git (fetch)
+upstream	https://github.com/ga-students/DS-SF-42.git (push)
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 12 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git add .
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 12 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git fetch upstream master
+From https://github.com/ga-students/DS-SF-42
+ * branch            master     -> FETCH_HEAD
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ l
+total 32
+-rw-r--r--  1 Shantanu  staff  2266 Jan 23 18:10 README.md
+drwxr-xr-x  5 Shantanu  staff   170 Jan 23 18:14 classes
+-rw-r--r--  1 Shantanu  staff  5708 Jan 16 20:20 project-examples.md
+-rw-r--r--  1 Shantanu  staff  3917 Jan 16 20:20 project.md
+drwxr-xr-x  3 Shantanu  staff   102 Jan 16 20:20 unit-project
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ cd classes
+Shantanus-MacBook-Pro-2:classes Shantanu$ l
+total 0
+drwxr-xr-x  5 Shantanu  staff  170 Jan 16 20:20 01
+drwxr-xr-x  5 Shantanu  staff  170 Jan 23 18:14 02
+drwxr-xr-x  5 Shantanu  staff  170 Jan 23 18:14 03
+Shantanus-MacBook-Pro-2:classes Shantanu$ cd 03
+Shantanus-MacBook-Pro-2:03 Shantanu$ l
+total 0
+drwxr-xr-x  4 Shantanu  staff  136 Jan 23 18:14 datasets
+drwxr-xr-x  6 Shantanu  staff  204 Jan 23 18:14 notebooks
+drwxr-xr-x  3 Shantanu  staff  102 Jan 23 18:14 slides
+Shantanus-MacBook-Pro-2:03 Shantanu$ cd ../../
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ l
+total 32
+-rw-r--r--  1 Shantanu  staff  2266 Jan 23 18:10 README.md
+drwxr-xr-x  5 Shantanu  staff   170 Jan 23 18:14 classes
+-rw-r--r--  1 Shantanu  staff  5708 Jan 16 20:20 project-examples.md
+-rw-r--r--  1 Shantanu  staff  3917 Jan 16 20:20 project.md
+drwxr-xr-x  3 Shantanu  staff   102 Jan 16 20:20 unit-project
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ pwd
+/Users/Shantanu/Desktop/DS-SF-42
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ l
+total 32
+-rw-r--r--  1 Shantanu  staff  2266 Jan 23 18:10 README.md
+drwxr-xr-x  5 Shantanu  staff   170 Jan 23 18:14 classes
+-rw-r--r--  1 Shantanu  staff  5708 Jan 16 20:20 project-examples.md
+-rw-r--r--  1 Shantanu  staff  3917 Jan 16 20:20 project.md
+drwxr-xr-x  3 Shantanu  staff   102 Jan 16 20:20 unit-project
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ cd classes/
+Shantanus-MacBook-Pro-2:classes Shantanu$ l
+total 0
+drwxr-xr-x  5 Shantanu  staff  170 Jan 16 20:20 01
+drwxr-xr-x  5 Shantanu  staff  170 Jan 23 18:14 02
+drwxr-xr-x  5 Shantanu  staff  170 Jan 23 18:14 03
+Shantanus-MacBook-Pro-2:classes Shantanu$ tree
+-bash: tree: command not found
+Shantanus-MacBook-Pro-2:classes Shantanu$ cd 03
+Shantanus-MacBook-Pro-2:03 Shantanu$ l
+total 0
+drwxr-xr-x  4 Shantanu  staff  136 Jan 23 18:14 datasets
+drwxr-xr-x  6 Shantanu  staff  204 Jan 23 18:14 notebooks
+drwxr-xr-x  3 Shantanu  staff  102 Jan 23 18:14 slides
+Shantanus-MacBook-Pro-2:03 Shantanu$ cd notebooks
+Shantanus-MacBook-Pro-2:notebooks Shantanu$ l
+total 872
+-rw-r--r--  1 Shantanu  staff   29087 Jan 23 18:14 assignment-03-exploratory-data-analysis-answer-key.ipynb
+-rw-r--r--  1 Shantanu  staff    7978 Jan 23 18:14 assignment-03-exploratory-data-analysis-starter-code.ipynb
+-rw-r--r--  1 Shantanu  staff  380443 Jan 23 18:14 codealong-03-exploratory-data-analysis-answer-key.ipynb
+-rw-r--r--  1 Shantanu  staff   24060 Jan 23 18:14 codealong-03-exploratory-data-analysis-starter-code.ipynb
+Shantanus-MacBook-Pro-2:notebooks Shantanu$ jupyter notebook
+[I 18:48:38.457 NotebookApp] JupyterLab alpha preview extension loaded from /Users/Shantanu/anaconda2/lib/python2.7/site-packages/jupyterlab
+JupyterLab v0.27.0
+Known labextensions:
+[I 18:48:38.460 NotebookApp] Running the core application with no additional extensions or settings
+[I 18:48:38.475 NotebookApp] Serving notebooks from local directory: /Users/Shantanu/Desktop/DS-SF-42/classes/03/notebooks
+[I 18:48:38.475 NotebookApp] 0 active kernels 
+[I 18:48:38.475 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/?token=21676626563e789fb57a30d753580ba42560ff4313556906
+[I 18:48:38.475 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:48:38.476 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=21676626563e789fb57a30d753580ba42560ff4313556906
+[I 18:48:38.978 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+^C[I 18:48:50.770 NotebookApp] interrupted
+Serving notebooks from local directory: /Users/Shantanu/Desktop/DS-SF-42/classes/03/notebooks
+0 active kernels 
+The Jupyter Notebook is running at: http://localhost:8888/?token=21676626563e789fb57a30d753580ba42560ff4313556906
+Shutdown this notebook server (y/[n])? y
+[C 18:48:53.218 NotebookApp] Shutdown confirmed
+[I 18:48:53.219 NotebookApp] Shutting down kernels
+Shantanus-MacBook-Pro-2:notebooks Shantanu$ l
+total 872
+-rw-r--r--  1 Shantanu  staff   29087 Jan 23 18:14 assignment-03-exploratory-data-analysis-answer-key.ipynb
+-rw-r--r--  1 Shantanu  staff    7978 Jan 23 18:14 assignment-03-exploratory-data-analysis-starter-code.ipynb
+-rw-r--r--  1 Shantanu  staff  380443 Jan 23 18:14 codealong-03-exploratory-data-analysis-answer-key.ipynb
+-rw-r--r--  1 Shantanu  staff   24060 Jan 23 18:14 codealong-03-exploratory-data-analysis-starter-code.ipynb
+Shantanus-MacBook-Pro-2:notebooks Shantanu$ cd ..
+Shantanus-MacBook-Pro-2:03 Shantanu$ l
+total 0
+drwxr-xr-x  4 Shantanu  staff  136 Jan 23 18:14 datasets
+drwxr-xr-x  6 Shantanu  staff  204 Jan 23 18:14 notebooks
+drwxr-xr-x  3 Shantanu  staff  102 Jan 23 18:14 slides
+Shantanus-MacBook-Pro-2:03 Shantanu$ jupyter notebook
+[I 18:49:02.949 NotebookApp] JupyterLab alpha preview extension loaded from /Users/Shantanu/anaconda2/lib/python2.7/site-packages/jupyterlab
+JupyterLab v0.27.0
+Known labextensions:
+[I 18:49:02.951 NotebookApp] Running the core application with no additional extensions or settings
+[I 18:49:02.959 NotebookApp] Serving notebooks from local directory: /Users/Shantanu/Desktop/DS-SF-42/classes/03
+[I 18:49:02.959 NotebookApp] 0 active kernels 
+[I 18:49:02.959 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/?token=14a03e7921eec189af4a82553e51b5de22b7788fc1fa68a0
+[I 18:49:02.959 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:49:02.968 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=14a03e7921eec189af4a82553e51b5de22b7788fc1fa68a0
+[I 18:49:03.372 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+^C[I 18:49:12.324 NotebookApp] interrupted
+Serving notebooks from local directory: /Users/Shantanu/Desktop/DS-SF-42/classes/03
+0 active kernels 
+The Jupyter Notebook is running at: http://localhost:8888/?token=14a03e7921eec189af4a82553e51b5de22b7788fc1fa68a0
+Shutdown this notebook server (y/[n])? y
+[C 18:49:13.730 NotebookApp] Shutdown confirmed
+[I 18:49:13.731 NotebookApp] Shutting down kernels
+Shantanus-MacBook-Pro-2:03 Shantanu$ l
+total 0
+drwxr-xr-x  4 Shantanu  staff  136 Jan 23 18:14 datasets
+drwxr-xr-x  6 Shantanu  staff  204 Jan 23 18:14 notebooks
+drwxr-xr-x  3 Shantanu  staff  102 Jan 23 18:14 slides
+Shantanus-MacBook-Pro-2:03 Shantanu$ cd ..
+Shantanus-MacBook-Pro-2:classes Shantanu$ l
+total 0
+drwxr-xr-x  5 Shantanu  staff  170 Jan 16 20:20 01
+drwxr-xr-x  5 Shantanu  staff  170 Jan 23 18:14 02
+drwxr-xr-x  5 Shantanu  staff  170 Jan 23 18:14 03
+Shantanus-MacBook-Pro-2:classes Shantanu$ jupyter notebook
+[I 18:49:30.293 NotebookApp] JupyterLab alpha preview extension loaded from /Users/Shantanu/anaconda2/lib/python2.7/site-packages/jupyterlab
+JupyterLab v0.27.0
+Known labextensions:
+[I 18:49:30.295 NotebookApp] Running the core application with no additional extensions or settings
+[I 18:49:30.302 NotebookApp] Serving notebooks from local directory: /Users/Shantanu/Desktop/DS-SF-42/classes
+[I 18:49:30.302 NotebookApp] 0 active kernels 
+[I 18:49:30.303 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/?token=fb7acc4c5fbfd81b77dbb85e03cd4f5024365c1416eba91f
+[I 18:49:30.303 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:49:30.312 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=fb7acc4c5fbfd81b77dbb85e03cd4f5024365c1416eba91f
+[I 18:49:30.701 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[W 18:49:45.115 NotebookApp] 404 GET /favicon.ico (::1) 23.44ms referer=http://localhost:8888/view/03/slides/slides-03-statistics-fundamentals.pdf
+[W 18:51:52.208 NotebookApp] Notebook 03/notebooks/assignment-03-exploratory-data-analysis-starter-code.ipynb is not trusted
+[I 18:51:52.927 NotebookApp] Kernel started: 1166ef8a-9a90-491f-ba69-4867808d8815
+[I 18:51:54.201 NotebookApp] Adapting to protocol v5.1 for kernel 1166ef8a-9a90-491f-ba69-4867808d8815
+[I 18:53:52.894 NotebookApp] Saving file at /03/notebooks/assignment-03-exploratory-data-analysis-starter-code.ipynb
+[W 18:53:52.895 NotebookApp] Saving untrusted notebook 03/notebooks/assignment-03-exploratory-data-analysis-starter-code.ipynb
+[W 19:24:44.064 NotebookApp] Notebook 02/notebooks/assignment-02-the-pandas-library-starter-code.ipynb is not trusted
+[I 19:24:45.363 NotebookApp] Kernel started: b997c142-c478-4642-89d8-3eef59484e37
+[I 19:24:47.420 NotebookApp] Adapting to protocol v5.1 for kernel b997c142-c478-4642-89d8-3eef59484e37
+[I 19:26:45.354 NotebookApp] Saving file at /02/notebooks/assignment-02-the-pandas-library-starter-code.ipynb
+[W 19:28:59.483 NotebookApp] Notebook 02/notebooks/codealong-02-the-pandas-library-starter-code.ipynb is not trusted
+[I 19:29:03.808 NotebookApp] Kernel started: c2274465-9f99-4cd3-8b9f-1d0f234a30f9
+[I 19:29:05.250 NotebookApp] Adapting to protocol v5.1 for kernel c2274465-9f99-4cd3-8b9f-1d0f234a30f9
+[I 19:29:16.413 NotebookApp] Saving file at /02/notebooks/assignment-02-the-pandas-library-starter-code.ipynb
+[I 19:31:03.805 NotebookApp] Saving file at /02/notebooks/codealong-02-the-pandas-library-starter-code.ipynb
+[I 19:33:16.439 NotebookApp] Saving file at /02/notebooks/assignment-02-the-pandas-library-starter-code.ipynb
+[W 19:33:30.841 NotebookApp] Notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb is not trusted
+[I 19:33:35.707 NotebookApp] Kernel started: b56ac560-83f0-4a3a-a4e0-c64129d27a9b
+[I 19:33:37.355 NotebookApp] Adapting to protocol v5.1 for kernel b56ac560-83f0-4a3a-a4e0-c64129d27a9b
+[I 19:35:35.724 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 19:35:35.727 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 19:40:01.024 NotebookApp] Notebook 03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb is not trusted
+[I 19:40:03.421 NotebookApp] Kernel started: db0f9efd-c5cb-4bfe-bad9-f87b59d1d211
+[I 19:40:05.094 NotebookApp] Adapting to protocol v5.1 for kernel db0f9efd-c5cb-4bfe-bad9-f87b59d1d211
+[I 19:42:03.430 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 19:46:03.428 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[W 19:46:37.149 NotebookApp] Notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb is not trusted
+[I 19:46:42.198 NotebookApp] Adapting to protocol v5.1 for kernel b56ac560-83f0-4a3a-a4e0-c64129d27a9b
+[I 19:48:41.918 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 19:48:41.921 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 19:50:41.922 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 19:50:41.925 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 19:54:41.931 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 19:54:41.935 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 19:58:41.941 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 19:58:41.944 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 20:00:41.947 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 20:00:41.950 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 20:02:03.257 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:04:03.239 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:06:41.731 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 20:06:41.734 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 20:08:41.740 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 20:08:41.743 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 20:12:41.749 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 20:12:41.752 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 20:14:41.756 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 20:14:41.759 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 20:16:41.758 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 20:16:41.761 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 20:18:41.763 NotebookApp] Saving file at /02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[W 20:18:41.766 NotebookApp] Saving untrusted notebook 02/notebooks/INCLASS-codealong-02-the-pandas-library-starter-code.ipynb
+[I 20:20:03.283 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:22:03.290 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:24:03.295 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:26:03.300 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:28:03.300 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:30:03.310 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:32:03.315 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:34:03.324 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:36:03.324 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:38:03.331 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:40:03.347 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:42:03.341 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:44:03.345 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:46:03.349 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:48:03.353 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:50:03.367 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:51:50.954 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:54:03.369 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 20:56:03.384 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 21:00:03.390 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 21:02:03.391 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 21:06:03.405 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 21:08:03.413 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 21:10:03.429 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+[I 21:16:03.448 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+^C[I 17:23:25.874 NotebookApp] interrupted
+Serving notebooks from local directory: /Users/Shantanu/Desktop/DS-SF-42/classes
+5 active kernels 
+The Jupyter Notebook is running at: http://localhost:8888/?token=fb7acc4c5fbfd81b77dbb85e03cd4f5024365c1416eba91f
+Shutdown this notebook server (y/[n])? y
+[C 17:23:27.694 NotebookApp] Shutdown confirmed
+[I 17:23:27.706 NotebookApp] Shutting down kernels
+[I 17:23:28.132 NotebookApp] Kernel shutdown: c2274465-9f99-4cd3-8b9f-1d0f234a30f9
+[I 17:23:28.134 NotebookApp] Kernel shutdown: 1166ef8a-9a90-491f-ba69-4867808d8815
+[I 17:23:28.441 NotebookApp] Kernel shutdown: b56ac560-83f0-4a3a-a4e0-c64129d27a9b
+[I 17:23:28.441 NotebookApp] Kernel shutdown: b997c142-c478-4642-89d8-3eef59484e37
+[I 17:23:29.060 NotebookApp] Kernel shutdown: db0f9efd-c5cb-4bfe-bad9-f87b59d1d211
+Shantanus-MacBook-Pro-2:classes Shantanu$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+	modified:   ../unit-project/project-1/starter-code/project1-starter.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Shantanus-MacBook-Pro-2:classes Shantanu$ history
+    1  cd
+    2  l
+    3  ls -ltr
+    4  alias l 'ls -ltr'
+    5  alias 'ls -ltr' l
+    6  alias l "ls -ltr"
+    7  alias l="ls -ltr"
+    8  l
+    9  l
+   10  cd Pictures
+   11  l
+   12  history
+   13  ..
+   14  cd
+   15  l
+   16  cd Downloads
+   17  l
+   18  cd /private/var/vm
+   19  cd /sleepimage
+   20  ls -ltr
+   21  cd sleepimage
+   22  rm sleepimage
+   23  cd
+   24  ls -ltr
+   25  cd library
+   26  l
+   27  alias l "-ls ltr"
+   28  alias l="-ls ltr"
+   29  l
+   30  alias l='-ls ltr'
+   31  l
+   32  -ls ltr
+   33  cd
+   34  l
+   35  l
+   36  -ls ltr
+   37  cd
+   38  alias l='ls -ltr'
+   39  l
+   40  du -sh
+   41  l
+   42  du -sh -h
+   43  du -sh Shantanu
+   44  du -sh Library
+   45  du -sh *
+   46  cd Pictures
+   47  l
+   48  du -sh *
+   49  ..
+   50  l
+   51  cd
+   52  l
+   53  cd music
+   54  du -sh *
+   55  cd itunes
+   56  l
+   57  du -sh *
+   58  cd Itunes Media
+   59  cd iTunes Media
+   60  less iTunes Media
+   61  less iTunesMedia
+   62  l
+   63  cd iTunes Media
+   64  cd
+   65  du -h --max-depth=1 | sort -hr
+   66  sort --help
+   67  ls -ltr
+   68  st -dh *
+   69  du -sh *
+   70  st -dh *
+   71  du -sh *
+   72  cd Library
+   73  l
+   74  alias l='ls -ltr'
+   75  l
+   76  du -sh *
+   77  cd containers
+   78  l
+   79  du -sh *
+   80  l
+   81  du -sh *
+   82  cd library
+   83  du -sh *
+   84  ipython notebook
+   85  /Users/Shantanu/anaconda2/bin/jupyter_mac.command ; exit;
+   86  git
+   87  git
+   88  sudo mv /usr/bin/git /usr/bin/git-system
+   89  cd /usr/bin
+   90  ls -l
+   91  clear
+   92  git
+   93  git
+   94  clear
+   95  ls -l
+   96  pwd
+   97  cd ~
+   98  pwd
+   99  l s0l
+  100  ls -l
+  101  alias l="ls -l"
+  102  l
+  103  ls
+  104  open .
+  105  cd Desktop
+  106  pwd
+  107  clear
+  108  mkdir USA
+  109  pwd
+  110  l
+  111  ls
+  112  pwd
+  113  l
+  114  pwd
+  115  l
+  116  mkdir west_coast
+  117  mv west_coast USA
+  118  cd USA
+  119  pwd
+  120  l
+  121  cd ..
+  122  pwd
+  123  cd USA
+  124  pwd
+  125  l
+  126  mkdir east_coast south_west mid_west south
+  127  l
+  128  ls
+  129  clear
+  130  ls
+  131  mkdir west_coast/san_francisco
+  132  mkdir west_coast/LA
+  133  cd west_coast/LA/
+  134  pwd
+  135  touch echo_park.txt hollywood.txt south_central.txt
+  136  l
+  137  cd ..
+  138  l
+  139  cd ..
+  140  l
+  141  tree
+  142  pwd
+  143  mkdir east_coast/Boston east_coast/NYC east_coast/hartford
+  144  l
+  145  cd east_coast/
+  146  l
+  147  cd ..
+  148  l
+  149  cd east_coast/
+  150  l
+  151  touch Boston/north_end.txt Boston/back_bay.txt
+  152  pwd
+  153  cd Boston/
+  154  l
+  155  tree
+  156  pwd
+  157  cd ...
+  158  cd ..
+  159  cd ..
+  160  pwd
+  161  l
+  162  mkdir east_coast/Nashville
+  163  l
+  164  cd east_coast/
+  165  l
+  166  pwd
+  167  cd ..
+  168  l
+  169  cd east_coast/Nashville/ south
+  170  l
+  171  mv east_coast/Nashville/ south
+  172  pwd
+  173  cd ..
+  174  cd ..
+  175  l
+  176  cd east_coast/
+  177  l
+  178  cd ..
+  179  l
+  180  mv east_coast/Nashville south
+  181  cd south
+  182  l
+  183  cd ..
+  184  pwd
+  185  l
+  186  cd east_coast/
+  187  l
+  188  cd hartford/
+  189  l
+  190  cd ..
+  191  l
+  192  cd ..
+  193  pwd
+  194  l
+  195  git init
+  196  clear
+  197  git status
+  198  git add east_coast/ west_coast/
+  199  git status
+  200  git commit -m "our very first USA commit"
+  201  git status
+  202  git log
+  203  l
+  204  mkdir mid_west/chicago
+  205  touch mid_west/chicago/southside.txt
+  206  pwd
+  207  cd mid_west/
+  208  l
+  209  cd chicago/
+  210  l
+  211  less southside.txt 
+  212  pwd
+  213  cd ../..
+  214  l
+  215  pwd
+  216  touch south/Nashville/imaginary_neighborhood.txt
+  217  git status
+  218  git add .
+  219  git status
+  220  git commit -m "midwest and south neighborhoods"
+  221  git log
+  222  git checkout 020ae507383050d0fca9550b3cc88a057a64e34d
+  223  pwd
+  224  l
+  225  git checkout master
+  226  l
+  227  cd mid_west/
+  228  l
+  229  cd chicago/
+  230  l
+  231  cd ../..
+  232  l
+  233  clear
+  234  cd ~
+  235  l
+  236  cd Desktop/
+  237  l
+  238  git clone https://github.com/ramuk8891/DS-SF-42
+  239  l
+  240  cd DS-SF-42/
+  241  rm https://github.com/ramuk8891/DS-SF-42
+  242  rm DSC02383.jpg
+  243  l
+  244  pwd
+  245  cd ..
+  246  l
+  247  rm DSC02383.jpg
+  248  l
+  249  cd DS-SF-42/
+  250  l
+  251  clear
+  252  cd pwd
+  253  pwd
+  254  l
+  255  jupyter notebook
+  256  jupyter notebook
+  257  pwd
+  258  l
+  259  pwd
+  260  jupyter notebook
+  261  jupyter notebook
+  262  pwd
+  263  jupyter notebook
+  264  jupyter notebook
+  265  pwd
+  266  pwd
+  267  git status
+  268  ls -l
+  269  git add -A
+  270  git status
+  271  git commit -m "uploading class 1 files"
+  272  git push
+  273  git push
+  274  git log
+  275  clear
+  276  git push -f origin master
+  277  pwd
+  278  git remote add upstream https://github.com/ga-students/DS-SF-42.git
+  279  git fetch upstream master
+  280  git checkout upstream/master README.md
+  281  git add
+  282  pwd
+  283  l
+  284  git log
+  285  git add .
+  286  git commit -m "updated version of readme"
+  287  git merge -m "merging class 02 materials" upstream/master
+  288  pwd
+  289  l
+  290  cd classes
+  291  l
+  292  history
+  293  pwd
+  294  cd ..
+  295  pwd
+  296  git remote -v
+  297  git status
+  298  git add .
+  299  git status
+  300  git fetch upstream master
+  301  l
+  302  cd classes
+  303  l
+  304  cd 03
+  305  l
+  306  cd ../../
+  307  l
+  308  pwd
+  309  l
+  310  cd classes/
+  311  l
+  312  tree
+  313  cd 03
+  314  l
+  315  cd notebooks
+  316  l
+  317  jupyter notebook
+  318  l
+  319  cd ..
+  320  l
+  321  jupyter notebook
+  322  l
+  323  cd ..
+  324  l
+  325  jupyter notebook
+  326  git status
+  327  history
+Shantanus-MacBook-Pro-2:classes Shantanu$ git add .
+Shantanus-MacBook-Pro-2:classes Shantanu$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ../unit-project/project-1/starter-code/project1-starter.ipynb
+
+Shantanus-MacBook-Pro-2:classes Shantanu$ cd ..
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ l
+total 32
+-rw-r--r--  1 Shantanu  staff  2266 Jan 23 18:10 README.md
+drwxr-xr-x  6 Shantanu  staff   204 Jan 23 19:05 classes
+-rw-r--r--  1 Shantanu  staff  5708 Jan 16 20:20 project-examples.md
+-rw-r--r--  1 Shantanu  staff  3917 Jan 16 20:20 project.md
+drwxr-xr-x  3 Shantanu  staff   102 Jan 16 20:20 unit-project
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   classes/03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   unit-project/project-1/starter-code/project1-starter.ipynb
+
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git add .
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   classes/03/notebooks/codealong-03-exploratory-data-analysis-starter-code.ipynb
+	modified:   unit-project/project-1/starter-code/project1-starter.ipynb
+
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ h | grep commit
+-bash: h: command not found
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ history | grep commit
+  200  git commit -m "our very first USA commit"
+  220  git commit -m "midwest and south neighborhoods"
+  271  git commit -m "uploading class 1 files"
+  286  git commit -m "updated version of readme"
+  335  h | grep commit
+  336  history | grep commit
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git commit -m "test commit"
+[master 9581ccf] test commit
+ Committer: Shantanu Kumar <Shantanu@Shantanus-MacBook-Pro-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 12 insertions(+), 12 deletions(-)
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ history | grep push
+  272  git push
+  273  git push
+  276  git push -f origin master
+  338  history | grep push
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git push -u origin master
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 1.03 KiB | 0 bytes/s, done.
+Total 10 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/ramuk8891/DS-SF-42
+   f0eaa9c..9581ccf  master -> master
+Branch master set up to track remote branch master from origin.
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ history
+    1  cd
+    2  l
+    3  ls -ltr
+    4  alias l 'ls -ltr'
+    5  alias 'ls -ltr' l
+    6  alias l "ls -ltr"
+    7  alias l="ls -ltr"
+    8  l
+    9  l
+   10  cd Pictures
+   11  l
+   12  history
+   13  ..
+   14  cd
+   15  l
+   16  cd Downloads
+   17  l
+   18  cd /private/var/vm
+   19  cd /sleepimage
+   20  ls -ltr
+   21  cd sleepimage
+   22  rm sleepimage
+   23  cd
+   24  ls -ltr
+   25  cd library
+   26  l
+   27  alias l "-ls ltr"
+   28  alias l="-ls ltr"
+   29  l
+   30  alias l='-ls ltr'
+   31  l
+   32  -ls ltr
+   33  cd
+   34  l
+   35  l
+   36  -ls ltr
+   37  cd
+   38  alias l='ls -ltr'
+   39  l
+   40  du -sh
+   41  l
+   42  du -sh -h
+   43  du -sh Shantanu
+   44  du -sh Library
+   45  du -sh *
+   46  cd Pictures
+   47  l
+   48  du -sh *
+   49  ..
+   50  l
+   51  cd
+   52  l
+   53  cd music
+   54  du -sh *
+   55  cd itunes
+   56  l
+   57  du -sh *
+   58  cd Itunes Media
+   59  cd iTunes Media
+   60  less iTunes Media
+   61  less iTunesMedia
+   62  l
+   63  cd iTunes Media
+   64  cd
+   65  du -h --max-depth=1 | sort -hr
+   66  sort --help
+   67  ls -ltr
+   68  st -dh *
+   69  du -sh *
+   70  st -dh *
+   71  du -sh *
+   72  cd Library
+   73  l
+   74  alias l='ls -ltr'
+   75  l
+   76  du -sh *
+   77  cd containers
+   78  l
+   79  du -sh *
+   80  l
+   81  du -sh *
+   82  cd library
+   83  du -sh *
+   84  ipython notebook
+   85  /Users/Shantanu/anaconda2/bin/jupyter_mac.command ; exit;
+   86  git
+   87  git
+   88  sudo mv /usr/bin/git /usr/bin/git-system
+   89  cd /usr/bin
+   90  ls -l
+   91  clear
+   92  git
+   93  git
+   94  clear
+   95  ls -l
+   96  pwd
+   97  cd ~
+   98  pwd
+   99  l s0l
+  100  ls -l
+  101  alias l="ls -l"
+  102  l
+  103  ls
+  104  open .
+  105  cd Desktop
+  106  pwd
+  107  clear
+  108  mkdir USA
+  109  pwd
+  110  l
+  111  ls
+  112  pwd
+  113  l
+  114  pwd
+  115  l
+  116  mkdir west_coast
+  117  mv west_coast USA
+  118  cd USA
+  119  pwd
+  120  l
+  121  cd ..
+  122  pwd
+  123  cd USA
+  124  pwd
+  125  l
+  126  mkdir east_coast south_west mid_west south
+  127  l
+  128  ls
+  129  clear
+  130  ls
+  131  mkdir west_coast/san_francisco
+  132  mkdir west_coast/LA
+  133  cd west_coast/LA/
+  134  pwd
+  135  touch echo_park.txt hollywood.txt south_central.txt
+  136  l
+  137  cd ..
+  138  l
+  139  cd ..
+  140  l
+  141  tree
+  142  pwd
+  143  mkdir east_coast/Boston east_coast/NYC east_coast/hartford
+  144  l
+  145  cd east_coast/
+  146  l
+  147  cd ..
+  148  l
+  149  cd east_coast/
+  150  l
+  151  touch Boston/north_end.txt Boston/back_bay.txt
+  152  pwd
+  153  cd Boston/
+  154  l
+  155  tree
+  156  pwd
+  157  cd ...
+  158  cd ..
+  159  cd ..
+  160  pwd
+  161  l
+  162  mkdir east_coast/Nashville
+  163  l
+  164  cd east_coast/
+  165  l
+  166  pwd
+  167  cd ..
+  168  l
+  169  cd east_coast/Nashville/ south
+  170  l
+  171  mv east_coast/Nashville/ south
+  172  pwd
+  173  cd ..
+  174  cd ..
+  175  l
+  176  cd east_coast/
+  177  l
+  178  cd ..
+  179  l
+  180  mv east_coast/Nashville south
+  181  cd south
+  182  l
+  183  cd ..
+  184  pwd
+  185  l
+  186  cd east_coast/
+  187  l
+  188  cd hartford/
+  189  l
+  190  cd ..
+  191  l
+  192  cd ..
+  193  pwd
+  194  l
+  195  git init
+  196  clear
+  197  git status
+  198  git add east_coast/ west_coast/
+  199  git status
+  200  git commit -m "our very first USA commit"
+  201  git status
+  202  git log
+  203  l
+  204  mkdir mid_west/chicago
+  205  touch mid_west/chicago/southside.txt
+  206  pwd
+  207  cd mid_west/
+  208  l
+  209  cd chicago/
+  210  l
+  211  less southside.txt 
+  212  pwd
+  213  cd ../..
+  214  l
+  215  pwd
+  216  touch south/Nashville/imaginary_neighborhood.txt
+  217  git status
+  218  git add .
+  219  git status
+  220  git commit -m "midwest and south neighborhoods"
+  221  git log
+  222  git checkout 020ae507383050d0fca9550b3cc88a057a64e34d
+  223  pwd
+  224  l
+  225  git checkout master
+  226  l
+  227  cd mid_west/
+  228  l
+  229  cd chicago/
+  230  l
+  231  cd ../..
+  232  l
+  233  clear
+  234  cd ~
+  235  l
+  236  cd Desktop/
+  237  l
+  238  git clone https://github.com/ramuk8891/DS-SF-42
+  239  l
+  240  cd DS-SF-42/
+  241  rm https://github.com/ramuk8891/DS-SF-42
+  242  rm DSC02383.jpg
+  243  l
+  244  pwd
+  245  cd ..
+  246  l
+  247  rm DSC02383.jpg
+  248  l
+  249  cd DS-SF-42/
+  250  l
+  251  clear
+  252  cd pwd
+  253  pwd
+  254  l
+  255  jupyter notebook
+  256  jupyter notebook
+  257  pwd
+  258  l
+  259  pwd
+  260  jupyter notebook
+  261  jupyter notebook
+  262  pwd
+  263  jupyter notebook
+  264  jupyter notebook
+  265  pwd
+  266  pwd
+  267  git status
+  268  ls -l
+  269  git add -A
+  270  git status
+  271  git commit -m "uploading class 1 files"
+  272  git push
+  273  git push
+  274  git log
+  275  clear
+  276  git push -f origin master
+  277  pwd
+  278  git remote add upstream https://github.com/ga-students/DS-SF-42.git
+  279  git fetch upstream master
+  280  git checkout upstream/master README.md
+  281  git add
+  282  pwd
+  283  l
+  284  git log
+  285  git add .
+  286  git commit -m "updated version of readme"
+  287  git merge -m "merging class 02 materials" upstream/master
+  288  pwd
+  289  l
+  290  cd classes
+  291  l
+  292  history
+  293  pwd
+  294  cd ..
+  295  pwd
+  296  git remote -v
+  297  git status
+  298  git add .
+  299  git status
+  300  git fetch upstream master
+  301  l
+  302  cd classes
+  303  l
+  304  cd 03
+  305  l
+  306  cd ../../
+  307  l
+  308  pwd
+  309  l
+  310  cd classes/
+  311  l
+  312  tree
+  313  cd 03
+  314  l
+  315  cd notebooks
+  316  l
+  317  jupyter notebook
+  318  l
+  319  cd ..
+  320  l
+  321  jupyter notebook
+  322  l
+  323  cd ..
+  324  l
+  325  jupyter notebook
+  326  git status
+  327  history
+  328  git add .
+  329  git status
+  330  cd ..
+  331  l
+  332  git status
+  333  git add .
+  334  git status
+  335  h | grep commit
+  336  history | grep commit
+  337  git commit -m "test commit"
+  338  history | grep push
+  339  git push -u origin master
+  340  history
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ l
+total 32
+-rw-r--r--  1 Shantanu  staff  2266 Jan 23 18:10 README.md
+drwxr-xr-x  6 Shantanu  staff   204 Jan 23 19:05 classes
+-rw-r--r--  1 Shantanu  staff  5708 Jan 16 20:20 project-examples.md
+-rw-r--r--  1 Shantanu  staff  3917 Jan 16 20:20 project.md
+drwxr-xr-x  3 Shantanu  staff   102 Jan 16 20:20 unit-project
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ l
+total 32
+-rw-r--r--  1 Shantanu  staff  2266 Jan 23 18:10 README.md
+drwxr-xr-x  6 Shantanu  staff   204 Jan 23 19:05 classes
+-rw-r--r--  1 Shantanu  staff  5708 Jan 16 20:20 project-examples.md
+-rw-r--r--  1 Shantanu  staff  3917 Jan 16 20:20 project.md
+drwxr-xr-x  3 Shantanu  staff   102 Jan 16 20:20 unit-project
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ pwd
+/Users/Shantanu/Desktop/DS-SF-42
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ l
+total 32
+-rw-r--r--  1 Shantanu  staff  2266 Jan 23 18:10 README.md
+drwxr-xr-x  6 Shantanu  staff   204 Jan 23 19:05 classes
+-rw-r--r--  1 Shantanu  staff  5708 Jan 16 20:20 project-examples.md
+-rw-r--r--  1 Shantanu  staff  3917 Jan 16 20:20 project.md
+drwxr-xr-x  3 Shantanu  staff   102 Jan 16 20:20 unit-project
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ history
+    1  cd
+    2  l
+    3  ls -ltr
+    4  alias l 'ls -ltr'
+    5  alias 'ls -ltr' l
+    6  alias l "ls -ltr"
+    7  alias l="ls -ltr"
+    8  l
+    9  l
+   10  cd Pictures
+   11  l
+   12  history
+   13  ..
+   14  cd
+   15  l
+   16  cd Downloads
+   17  l
+   18  cd /private/var/vm
+   19  cd /sleepimage
+   20  ls -ltr
+   21  cd sleepimage
+   22  rm sleepimage
+   23  cd
+   24  ls -ltr
+   25  cd library
+   26  l
+   27  alias l "-ls ltr"
+   28  alias l="-ls ltr"
+   29  l
+   30  alias l='-ls ltr'
+   31  l
+   32  -ls ltr
+   33  cd
+   34  l
+   35  l
+   36  -ls ltr
+   37  cd
+   38  alias l='ls -ltr'
+   39  l
+   40  du -sh
+   41  l
+   42  du -sh -h
+   43  du -sh Shantanu
+   44  du -sh Library
+   45  du -sh *
+   46  cd Pictures
+   47  l
+   48  du -sh *
+   49  ..
+   50  l
+   51  cd
+   52  l
+   53  cd music
+   54  du -sh *
+   55  cd itunes
+   56  l
+   57  du -sh *
+   58  cd Itunes Media
+   59  cd iTunes Media
+   60  less iTunes Media
+   61  less iTunesMedia
+   62  l
+   63  cd iTunes Media
+   64  cd
+   65  du -h --max-depth=1 | sort -hr
+   66  sort --help
+   67  ls -ltr
+   68  st -dh *
+   69  du -sh *
+   70  st -dh *
+   71  du -sh *
+   72  cd Library
+   73  l
+   74  alias l='ls -ltr'
+   75  l
+   76  du -sh *
+   77  cd containers
+   78  l
+   79  du -sh *
+   80  l
+   81  du -sh *
+   82  cd library
+   83  du -sh *
+   84  ipython notebook
+   85  /Users/Shantanu/anaconda2/bin/jupyter_mac.command ; exit;
+   86  git
+   87  git
+   88  sudo mv /usr/bin/git /usr/bin/git-system
+   89  cd /usr/bin
+   90  ls -l
+   91  clear
+   92  git
+   93  git
+   94  clear
+   95  ls -l
+   96  pwd
+   97  cd ~
+   98  pwd
+   99  l s0l
+  100  ls -l
+  101  alias l="ls -l"
+  102  l
+  103  ls
+  104  open .
+  105  cd Desktop
+  106  pwd
+  107  clear
+  108  mkdir USA
+  109  pwd
+  110  l
+  111  ls
+  112  pwd
+  113  l
+  114  pwd
+  115  l
+  116  mkdir west_coast
+  117  mv west_coast USA
+  118  cd USA
+  119  pwd
+  120  l
+  121  cd ..
+  122  pwd
+  123  cd USA
+  124  pwd
+  125  l
+  126  mkdir east_coast south_west mid_west south
+  127  l
+  128  ls
+  129  clear
+  130  ls
+  131  mkdir west_coast/san_francisco
+  132  mkdir west_coast/LA
+  133  cd west_coast/LA/
+  134  pwd
+  135  touch echo_park.txt hollywood.txt south_central.txt
+  136  l
+  137  cd ..
+  138  l
+  139  cd ..
+  140  l
+  141  tree
+  142  pwd
+  143  mkdir east_coast/Boston east_coast/NYC east_coast/hartford
+  144  l
+  145  cd east_coast/
+  146  l
+  147  cd ..
+  148  l
+  149  cd east_coast/
+  150  l
+  151  touch Boston/north_end.txt Boston/back_bay.txt
+  152  pwd
+  153  cd Boston/
+  154  l
+  155  tree
+  156  pwd
+  157  cd ...
+  158  cd ..
+  159  cd ..
+  160  pwd
+  161  l
+  162  mkdir east_coast/Nashville
+  163  l
+  164  cd east_coast/
+  165  l
+  166  pwd
+  167  cd ..
+  168  l
+  169  cd east_coast/Nashville/ south
+  170  l
+  171  mv east_coast/Nashville/ south
+  172  pwd
+  173  cd ..
+  174  cd ..
+  175  l
+  176  cd east_coast/
+  177  l
+  178  cd ..
+  179  l
+  180  mv east_coast/Nashville south
+  181  cd south
+  182  l
+  183  cd ..
+  184  pwd
+  185  l
+  186  cd east_coast/
+  187  l
+  188  cd hartford/
+  189  l
+  190  cd ..
+  191  l
+  192  cd ..
+  193  pwd
+  194  l
+  195  git init
+  196  clear
+  197  git status
+  198  git add east_coast/ west_coast/
+  199  git status
+  200  git commit -m "our very first USA commit"
+  201  git status
+  202  git log
+  203  l
+  204  mkdir mid_west/chicago
+  205  touch mid_west/chicago/southside.txt
+  206  pwd
+  207  cd mid_west/
+  208  l
+  209  cd chicago/
+  210  l
+  211  less southside.txt 
+  212  pwd
+  213  cd ../..
+  214  l
+  215  pwd
+  216  touch south/Nashville/imaginary_neighborhood.txt
+  217  git status
+  218  git add .
+  219  git status
+  220  git commit -m "midwest and south neighborhoods"
+  221  git log
+  222  git checkout 020ae507383050d0fca9550b3cc88a057a64e34d
+  223  pwd
+  224  l
+  225  git checkout master
+  226  l
+  227  cd mid_west/
+  228  l
+  229  cd chicago/
+  230  l
+  231  cd ../..
+  232  l
+  233  clear
+  234  cd ~
+  235  l
+  236  cd Desktop/
+  237  l
+  238  git clone https://github.com/ramuk8891/DS-SF-42
+  239  l
+  240  cd DS-SF-42/
+  241  rm https://github.com/ramuk8891/DS-SF-42
+  242  rm DSC02383.jpg
+  243  l
+  244  pwd
+  245  cd ..
+  246  l
+  247  rm DSC02383.jpg
+  248  l
+  249  cd DS-SF-42/
+  250  l
+  251  clear
+  252  cd pwd
+  253  pwd
+  254  l
+  255  jupyter notebook
+  256  jupyter notebook
+  257  pwd
+  258  l
+  259  pwd
+  260  jupyter notebook
+  261  jupyter notebook
+  262  pwd
+  263  jupyter notebook
+  264  jupyter notebook
+  265  pwd
+  266  pwd
+  267  git status
+  268  ls -l
+  269  git add -A
+  270  git status
+  271  git commit -m "uploading class 1 files"
+  272  git push
+  273  git push
+  274  git log
+  275  clear
+  276  git push -f origin master
+  277  pwd
+  278  git remote add upstream https://github.com/ga-students/DS-SF-42.git
+  279  git fetch upstream master
+  280  git checkout upstream/master README.md
+  281  git add
+  282  pwd
+  283  l
+  284  git log
+  285  git add .
+  286  git commit -m "updated version of readme"
+  287  git merge -m "merging class 02 materials" upstream/master
+  288  pwd
+  289  l
+  290  cd classes
+  291  l
+  292  history
+  293  pwd
+  294  cd ..
+  295  pwd
+  296  git remote -v
+  297  git status
+  298  git add .
+  299  git status
+  300  git fetch upstream master
+  301  l
+  302  cd classes
+  303  l
+  304  cd 03
+  305  l
+  306  cd ../../
+  307  l
+  308  pwd
+  309  l
+  310  cd classes/
+  311  l
+  312  tree
+  313  cd 03
+  314  l
+  315  cd notebooks
+  316  l
+  317  jupyter notebook
+  318  l
+  319  cd ..
+  320  l
+  321  jupyter notebook
+  322  l
+  323  cd ..
+  324  l
+  325  jupyter notebook
+  326  git status
+  327  history
+  328  git add .
+  329  git status
+  330  cd ..
+  331  l
+  332  git status
+  333  git add .
+  334  git status
+  335  h | grep commit
+  336  history | grep commit
+  337  git commit -m "test commit"
+  338  history | grep push
+  339  git push -u origin master
+  340  history
+  341  l
+  342  l
+  343  pwd
+  344  l
+  345  history
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ pwd
+/Users/Shantanu/Desktop/DS-SF-42
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git fetch upstream master
+remote: Counting objects: 46, done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 46 (delta 17), reused 41 (delta 12), pack-reused 0
+Unpacking objects: 100% (46/46), done.
+From https://github.com/ga-students/DS-SF-42
+ * branch            master     -> FETCH_HEAD
+   97cca18..c153eef  master     -> upstream/master
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ git merge upstream/master
+Merge made by the 'recursive' strategy.
+ .../INCLASS-codealong-03-exploratory-data-analysis-starter-code.ipynb     |  2630 ++
+ classes/04/extra-work/pandas-dataframe_manipulation-lab/.gitignore        |    92 +
+ classes/04/extra-work/pandas-dataframe_manipulation-lab/CHANGELOG.md      |    14 +
+ .../dataframe-manipulation-chipotle-data.ipynb                            |   392 +
+ .../04/extra-work/pandas-dataframe_manipulation-lab/datasets/chipotle.tsv |  4623 ++
+ .../solution-code/dataframe-manipulation-chipotle-data-solutions.ipynb    |  2638 ++
+ classes/04/notebooks/pandas-grouping-lesson/.gitignore                    |    92 +
+ classes/04/notebooks/pandas-grouping-lesson/CHANGELOG.md                  |    15 +
+ classes/04/notebooks/pandas-grouping-lesson/datasets/titanic_clean.csv    |   713 +
+ classes/04/notebooks/pandas-grouping-lesson/datasets/ufo.csv              | 80544 ++++++++++++++++++++++++++++++++
+ .../pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb          |   951 +
+ .../04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb    |   195 +
+ .../solution-code/intro-to-grouping-pandas-lesson-solutions.ipynb         |  2311 +
+ .../solution-code/practice-pandas-grouping-solutions.ipynb                |   740 +
+ 14 files changed, 95950 insertions(+)
+ create mode 100644 classes/03/notebooks/INCLASS-codealong-03-exploratory-data-analysis-starter-code.ipynb
+ create mode 100644 classes/04/extra-work/pandas-dataframe_manipulation-lab/.gitignore
+ create mode 100644 classes/04/extra-work/pandas-dataframe_manipulation-lab/CHANGELOG.md
+ create mode 100644 classes/04/extra-work/pandas-dataframe_manipulation-lab/dataframe-manipulation-chipotle-data.ipynb
+ create mode 100644 classes/04/extra-work/pandas-dataframe_manipulation-lab/datasets/chipotle.tsv
+ create mode 100644 classes/04/extra-work/pandas-dataframe_manipulation-lab/solution-code/dataframe-manipulation-chipotle-data-solutions.ipynb
+ create mode 100644 classes/04/notebooks/pandas-grouping-lesson/.gitignore
+ create mode 100644 classes/04/notebooks/pandas-grouping-lesson/CHANGELOG.md
+ create mode 100644 classes/04/notebooks/pandas-grouping-lesson/datasets/titanic_clean.csv
+ create mode 100644 classes/04/notebooks/pandas-grouping-lesson/datasets/ufo.csv
+ create mode 100644 classes/04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+ create mode 100644 classes/04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+ create mode 100644 classes/04/notebooks/pandas-grouping-lesson/solution-code/intro-to-grouping-pandas-lesson-solutions.ipynb
+ create mode 100644 classes/04/notebooks/pandas-grouping-lesson/solution-code/practice-pandas-grouping-solutions.ipynb
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ history
+    1  cd
+    2  l
+    3  ls -ltr
+    4  alias l 'ls -ltr'
+    5  alias 'ls -ltr' l
+    6  alias l "ls -ltr"
+    7  alias l="ls -ltr"
+    8  l
+    9  l
+   10  cd Pictures
+   11  l
+   12  history
+   13  ..
+   14  cd
+   15  l
+   16  cd Downloads
+   17  l
+   18  cd /private/var/vm
+   19  cd /sleepimage
+   20  ls -ltr
+   21  cd sleepimage
+   22  rm sleepimage
+   23  cd
+   24  ls -ltr
+   25  cd library
+   26  l
+   27  alias l "-ls ltr"
+   28  alias l="-ls ltr"
+   29  l
+   30  alias l='-ls ltr'
+   31  l
+   32  -ls ltr
+   33  cd
+   34  l
+   35  l
+   36  -ls ltr
+   37  cd
+   38  alias l='ls -ltr'
+   39  l
+   40  du -sh
+   41  l
+   42  du -sh -h
+   43  du -sh Shantanu
+   44  du -sh Library
+   45  du -sh *
+   46  cd Pictures
+   47  l
+   48  du -sh *
+   49  ..
+   50  l
+   51  cd
+   52  l
+   53  cd music
+   54  du -sh *
+   55  cd itunes
+   56  l
+   57  du -sh *
+   58  cd Itunes Media
+   59  cd iTunes Media
+   60  less iTunes Media
+   61  less iTunesMedia
+   62  l
+   63  cd iTunes Media
+   64  cd
+   65  du -h --max-depth=1 | sort -hr
+   66  sort --help
+   67  ls -ltr
+   68  st -dh *
+   69  du -sh *
+   70  st -dh *
+   71  du -sh *
+   72  cd Library
+   73  l
+   74  alias l='ls -ltr'
+   75  l
+   76  du -sh *
+   77  cd containers
+   78  l
+   79  du -sh *
+   80  l
+   81  du -sh *
+   82  cd library
+   83  du -sh *
+   84  ipython notebook
+   85  /Users/Shantanu/anaconda2/bin/jupyter_mac.command ; exit;
+   86  git
+   87  git
+   88  sudo mv /usr/bin/git /usr/bin/git-system
+   89  cd /usr/bin
+   90  ls -l
+   91  clear
+   92  git
+   93  git
+   94  clear
+   95  ls -l
+   96  pwd
+   97  cd ~
+   98  pwd
+   99  l s0l
+  100  ls -l
+  101  alias l="ls -l"
+  102  l
+  103  ls
+  104  open .
+  105  cd Desktop
+  106  pwd
+  107  clear
+  108  mkdir USA
+  109  pwd
+  110  l
+  111  ls
+  112  pwd
+  113  l
+  114  pwd
+  115  l
+  116  mkdir west_coast
+  117  mv west_coast USA
+  118  cd USA
+  119  pwd
+  120  l
+  121  cd ..
+  122  pwd
+  123  cd USA
+  124  pwd
+  125  l
+  126  mkdir east_coast south_west mid_west south
+  127  l
+  128  ls
+  129  clear
+  130  ls
+  131  mkdir west_coast/san_francisco
+  132  mkdir west_coast/LA
+  133  cd west_coast/LA/
+  134  pwd
+  135  touch echo_park.txt hollywood.txt south_central.txt
+  136  l
+  137  cd ..
+  138  l
+  139  cd ..
+  140  l
+  141  tree
+  142  pwd
+  143  mkdir east_coast/Boston east_coast/NYC east_coast/hartford
+  144  l
+  145  cd east_coast/
+  146  l
+  147  cd ..
+  148  l
+  149  cd east_coast/
+  150  l
+  151  touch Boston/north_end.txt Boston/back_bay.txt
+  152  pwd
+  153  cd Boston/
+  154  l
+  155  tree
+  156  pwd
+  157  cd ...
+  158  cd ..
+  159  cd ..
+  160  pwd
+  161  l
+  162  mkdir east_coast/Nashville
+  163  l
+  164  cd east_coast/
+  165  l
+  166  pwd
+  167  cd ..
+  168  l
+  169  cd east_coast/Nashville/ south
+  170  l
+  171  mv east_coast/Nashville/ south
+  172  pwd
+  173  cd ..
+  174  cd ..
+  175  l
+  176  cd east_coast/
+  177  l
+  178  cd ..
+  179  l
+  180  mv east_coast/Nashville south
+  181  cd south
+  182  l
+  183  cd ..
+  184  pwd
+  185  l
+  186  cd east_coast/
+  187  l
+  188  cd hartford/
+  189  l
+  190  cd ..
+  191  l
+  192  cd ..
+  193  pwd
+  194  l
+  195  git init
+  196  clear
+  197  git status
+  198  git add east_coast/ west_coast/
+  199  git status
+  200  git commit -m "our very first USA commit"
+  201  git status
+  202  git log
+  203  l
+  204  mkdir mid_west/chicago
+  205  touch mid_west/chicago/southside.txt
+  206  pwd
+  207  cd mid_west/
+  208  l
+  209  cd chicago/
+  210  l
+  211  less southside.txt 
+  212  pwd
+  213  cd ../..
+  214  l
+  215  pwd
+  216  touch south/Nashville/imaginary_neighborhood.txt
+  217  git status
+  218  git add .
+  219  git status
+  220  git commit -m "midwest and south neighborhoods"
+  221  git log
+  222  git checkout 020ae507383050d0fca9550b3cc88a057a64e34d
+  223  pwd
+  224  l
+  225  git checkout master
+  226  l
+  227  cd mid_west/
+  228  l
+  229  cd chicago/
+  230  l
+  231  cd ../..
+  232  l
+  233  clear
+  234  cd ~
+  235  l
+  236  cd Desktop/
+  237  l
+  238  git clone https://github.com/ramuk8891/DS-SF-42
+  239  l
+  240  cd DS-SF-42/
+  241  rm https://github.com/ramuk8891/DS-SF-42
+  242  rm DSC02383.jpg
+  243  l
+  244  pwd
+  245  cd ..
+  246  l
+  247  rm DSC02383.jpg
+  248  l
+  249  cd DS-SF-42/
+  250  l
+  251  clear
+  252  cd pwd
+  253  pwd
+  254  l
+  255  jupyter notebook
+  256  jupyter notebook
+  257  pwd
+  258  l
+  259  pwd
+  260  jupyter notebook
+  261  jupyter notebook
+  262  pwd
+  263  jupyter notebook
+  264  jupyter notebook
+  265  pwd
+  266  pwd
+  267  git status
+  268  ls -l
+  269  git add -A
+  270  git status
+  271  git commit -m "uploading class 1 files"
+  272  git push
+  273  git push
+  274  git log
+  275  clear
+  276  git push -f origin master
+  277  pwd
+  278  git remote add upstream https://github.com/ga-students/DS-SF-42.git
+  279  git fetch upstream master
+  280  git checkout upstream/master README.md
+  281  git add
+  282  pwd
+  283  l
+  284  git log
+  285  git add .
+  286  git commit -m "updated version of readme"
+  287  git merge -m "merging class 02 materials" upstream/master
+  288  pwd
+  289  l
+  290  cd classes
+  291  l
+  292  history
+  293  pwd
+  294  cd ..
+  295  pwd
+  296  git remote -v
+  297  git status
+  298  git add .
+  299  git status
+  300  git fetch upstream master
+  301  l
+  302  cd classes
+  303  l
+  304  cd 03
+  305  l
+  306  cd ../../
+  307  l
+  308  pwd
+  309  l
+  310  cd classes/
+  311  l
+  312  tree
+  313  cd 03
+  314  l
+  315  cd notebooks
+  316  l
+  317  jupyter notebook
+  318  l
+  319  cd ..
+  320  l
+  321  jupyter notebook
+  322  l
+  323  cd ..
+  324  l
+  325  jupyter notebook
+  326  git status
+  327  history
+  328  git add .
+  329  git status
+  330  cd ..
+  331  l
+  332  git status
+  333  git add .
+  334  git status
+  335  h | grep commit
+  336  history | grep commit
+  337  git commit -m "test commit"
+  338  history | grep push
+  339  git push -u origin master
+  340  history
+  341  l
+  342  l
+  343  pwd
+  344  l
+  345  history
+  346  pwd
+  347  git status
+  348  git status
+  349  git fetch upstream master
+  350  git merge upstream/master
+  351  history
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ l
+total 32
+-rw-r--r--  1 Shantanu  staff  2266 Jan 23 18:10 README.md
+drwxr-xr-x  7 Shantanu  staff   238 Jan 25 18:59 classes
+-rw-r--r--  1 Shantanu  staff  5708 Jan 16 20:20 project-examples.md
+-rw-r--r--  1 Shantanu  staff  3917 Jan 16 20:20 project.md
+drwxr-xr-x  3 Shantanu  staff   102 Jan 16 20:20 unit-project
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ cd classes
+Shantanus-MacBook-Pro-2:classes Shantanu$ l
+total 0
+drwxr-xr-x  5 Shantanu  staff  170 Jan 16 20:20 01
+drwxr-xr-x  6 Shantanu  staff  204 Jan 23 19:20 02
+drwxr-xr-x  6 Shantanu  staff  204 Jan 23 19:05 03
+drwxr-xr-x  4 Shantanu  staff  136 Jan 25 18:59 04
+Shantanus-MacBook-Pro-2:classes Shantanu$ jupyter notebook
+[I 19:01:19.399 NotebookApp] JupyterLab alpha preview extension loaded from /Users/Shantanu/anaconda2/lib/python2.7/site-packages/jupyterlab
+JupyterLab v0.27.0
+Known labextensions:
+[I 19:01:19.401 NotebookApp] Running the core application with no additional extensions or settings
+[I 19:01:19.411 NotebookApp] Serving notebooks from local directory: /Users/Shantanu/Desktop/DS-SF-42/classes
+[I 19:01:19.411 NotebookApp] 0 active kernels 
+[I 19:01:19.411 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/?token=a26eb9f7a9748f330ba9fe312dfb0a1494f600bcaec066e1
+[I 19:01:19.411 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 19:01:19.413 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=a26eb9f7a9748f330ba9fe312dfb0a1494f600bcaec066e1
+[I 19:01:19.937 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[W 19:01:36.019 NotebookApp] Notebook 04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb is not trusted
+[I 19:01:37.616 NotebookApp] Kernel started: afe63e5c-dcce-439c-9f28-c09890a2c313
+[I 19:01:38.920 NotebookApp] Adapting to protocol v5.1 for kernel afe63e5c-dcce-439c-9f28-c09890a2c313
+[I 19:03:47.034 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[W 19:03:47.036 NotebookApp] Saving untrusted notebook 04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:07:37.590 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[W 19:07:37.591 NotebookApp] Saving untrusted notebook 04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:09:31.119 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[W 19:09:31.121 NotebookApp] Saving untrusted notebook 04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:11:32.625 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[W 19:11:32.626 NotebookApp] Saving untrusted notebook 04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:13:31.130 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[W 19:13:31.131 NotebookApp] Saving untrusted notebook 04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:15:31.134 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[W 19:15:31.136 NotebookApp] Saving untrusted notebook 04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:17:31.143 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:19:31.150 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:21:31.150 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:23:31.150 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:25:31.156 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:31:31.172 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:35:31.188 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:37:31.190 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[W 19:38:14.097 NotebookApp] Notebook 01/notebooks/python-iteration_control_functions-lesson/solution-code/iteration-control-flows-functions-solutions.ipynb is not trusted
+[I 19:38:15.723 NotebookApp] Kernel started: 721a33f5-953a-4912-bac2-bed0c1160b00
+[I 19:38:17.659 NotebookApp] Adapting to protocol v5.1 for kernel 721a33f5-953a-4912-bac2-bed0c1160b00
+[I 19:39:31.193 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:41:31.203 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:43:31.212 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:45:31.209 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:47:31.231 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:49:31.222 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:51:31.226 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:53:31.233 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:55:31.248 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 19:57:31.244 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:03:31.260 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:05:31.284 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:07:31.267 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:09:31.276 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:11:31.276 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:13:31.284 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:15:31.291 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:17:31.295 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:19:31.306 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:21:31.304 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:23:31.311 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:29:31.326 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:31:31.327 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:33:31.341 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:35:31.343 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:37:31.344 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:39:31.354 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:41:31.359 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:43:31.363 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:45:31.373 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[I 20:49:31.377 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/intro-to-grouping-pandas-lesson.ipynb
+[W 20:50:00.930 NotebookApp] Notebook 04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb is not trusted
+[I 20:50:01.353 NotebookApp] Kernel started: 5777e758-17b1-4115-a451-8cfb7d43d487
+[I 20:50:03.332 NotebookApp] Adapting to protocol v5.1 for kernel 5777e758-17b1-4115-a451-8cfb7d43d487
+[I 20:52:01.347 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 20:54:01.348 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 20:56:01.360 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 20:58:01.360 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 21:00:01.374 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 21:02:01.368 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 21:04:01.376 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 21:06:01.385 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 21:08:01.385 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[W 21:08:22.872 NotebookApp] Notebook 03/notebooks/codealong-03-exploratory-data-analysis-answer-key.ipynb is not trusted
+[I 21:08:27.213 NotebookApp] Kernel started: 51d2fb6c-edf5-4be1-9277-abcdc935aad8
+[I 21:08:28.664 NotebookApp] Adapting to protocol v5.1 for kernel 51d2fb6c-edf5-4be1-9277-abcdc935aad8
+[I 21:10:01.387 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 21:10:27.222 NotebookApp] Saving file at /03/notebooks/codealong-03-exploratory-data-analysis-answer-key.ipynb
+[W 21:10:27.226 NotebookApp] Saving untrusted notebook 03/notebooks/codealong-03-exploratory-data-analysis-answer-key.ipynb
+[I 21:12:01.423 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 21:14:01.407 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 21:16:01.412 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 21:24:01.422 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[W 21:24:57.316 NotebookApp] Notebook 04/notebooks/pandas-grouping-lesson/solution-code/practice-pandas-grouping-solutions.ipynb is not trusted
+[I 21:24:57.971 NotebookApp] Kernel started: be0c80f2-e3c9-438a-b7ef-0cc6dae3f84e
+[I 21:24:59.713 NotebookApp] Adapting to protocol v5.1 for kernel be0c80f2-e3c9-438a-b7ef-0cc6dae3f84e
+[I 21:26:01.431 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/practice-pandas-grouping.ipynb
+[I 21:26:57.953 NotebookApp] Saving file at /04/notebooks/pandas-grouping-lesson/solution-code/practice-pandas-grouping-solutions.ipynb
+[W 21:26:57.954 NotebookApp] Saving untrusted notebook 04/notebooks/pandas-grouping-lesson/solution-code/practice-pandas-grouping-solutions.ipynb
+[W 12:30:41.998 NotebookApp] No such file or directory: Desktop/Python
+[W 12:30:41.999 NotebookApp] 404 GET /api/contents/Desktop/Python?type=directory&_=1513450454373 (::1) 11.75ms referer=http://localhost:8888/tree/Desktop/Python
+[W 12:30:59.539 NotebookApp] No such file or directory: Desktop/Python
+[W 12:30:59.540 NotebookApp] 404 GET /api/contents/Desktop/Python?type=directory&_=1513450454376 (::1) 2.61ms referer=http://localhost:8888/tree/Desktop/Python
+[W 12:34:40.061 NotebookApp] No such file or directory: Desktop/Python
+[W 12:34:40.061 NotebookApp] 404 GET /api/contents/Desktop/Python?type=directory&_=1513450454379 (::1) 2.47ms referer=http://localhost:8888/tree/Desktop/Python
+[W 09:38:25.539 NotebookApp] No such file or directory: Desktop/Python
+[W 09:38:25.540 NotebookApp] 404 GET /api/contents/Desktop/Python?type=directory&_=1513450454382 (::1) 6.00ms referer=http://localhost:8888/tree/Desktop/Python
+[W 10:48:22.450 NotebookApp] Notebook 04/notebooks/pandas-grouping-lesson/solution-code/practice-pandas-grouping-solutions.ipynb is not trusted
+[I 10:48:23.305 NotebookApp] Adapting to protocol v5.1 for kernel be0c80f2-e3c9-438a-b7ef-0cc6dae3f84e
+^C[I 12:32:03.608 NotebookApp] interrupted
+Serving notebooks from local directory: /Users/Shantanu/Desktop/DS-SF-42/classes
+5 active kernels 
+The Jupyter Notebook is running at: http://localhost:8888/?token=a26eb9f7a9748f330ba9fe312dfb0a1494f600bcaec066e1
+Shutdown this notebook server (y/[n])? n
+resuming operation...
+^C[I 12:32:10.576 NotebookApp] interrupted
+Serving notebooks from local directory: /Users/Shantanu/Desktop/DS-SF-42/classes
+5 active kernels 
+The Jupyter Notebook is running at: http://localhost:8888/?token=a26eb9f7a9748f330ba9fe312dfb0a1494f600bcaec066e1
+Shutdown this notebook server (y/[n])? y
+[C 12:32:11.815 NotebookApp] Shutdown confirmed
+[I 12:32:11.825 NotebookApp] Shutting down kernels
+[I 12:32:12.349 NotebookApp] Kernel shutdown: 51d2fb6c-edf5-4be1-9277-abcdc935aad8
+[I 12:32:12.961 NotebookApp] Kernel shutdown: afe63e5c-dcce-439c-9f28-c09890a2c313
+[I 12:32:12.961 NotebookApp] Kernel shutdown: be0c80f2-e3c9-438a-b7ef-0cc6dae3f84e
+[I 12:32:12.962 NotebookApp] Kernel shutdown: 5777e758-17b1-4115-a451-8cfb7d43d487
+[I 12:32:12.963 NotebookApp] Kernel shutdown: 721a33f5-953a-4912-bac2-bed0c1160b00
+Shantanus-MacBook-Pro-2:classes Shantanu$ pwd
+/Users/Shantanu/Desktop/DS-SF-42/classes
+Shantanus-MacBook-Pro-2:classes Shantanu$ cd ..
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ l
+total 32
+-rw-r--r--  1 Shantanu  staff  2266 Jan 23 18:10 README.md
+drwxr-xr-x  7 Shantanu  staff   238 Jan 25 18:59 classes
+-rw-r--r--  1 Shantanu  staff  5708 Jan 16 20:20 project-examples.md
+-rw-r--r--  1 Shantanu  staff  3917 Jan 16 20:20 project.md
+drwxr-xr-x  3 Shantanu  staff   102 Jan 16 20:20 unit-project
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ pwd
+/Users/Shantanu/Desktop/DS-SF-42
+Shantanus-MacBook-Pro-2:DS-SF-42 Shantanu$ jupyter notebook
+[I 18:12:19.620 NotebookApp] JupyterLab alpha preview extension loaded from /Users/Shantanu/anaconda2/lib/python2.7/site-packages/jupyterlab
+JupyterLab v0.27.0
+Known labextensions:
+[I 18:12:19.622 NotebookApp] Running the core application with no additional extensions or settings
+[I 18:12:19.635 NotebookApp] Serving notebooks from local directory: /Users/Shantanu/Desktop/DS-SF-42
+[I 18:12:19.636 NotebookApp] 0 active kernels 
+[I 18:12:19.636 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/?token=39a6632f482e07306f71c9adc521d35e93dd7e47e473250c
+[I 18:12:19.636 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:12:19.638 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=39a6632f482e07306f71c9adc521d35e93dd7e47e473250c
+[I 18:12:19.887 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[I 18:16:02.199 NotebookApp] Kernel started: 65eedd34-756c-42c0-aba9-f341ec63c219
+[I 18:16:03.315 NotebookApp] Adapting to protocol v5.1 for kernel 65eedd34-756c-42c0-aba9-f341ec63c219
+[W 18:16:40.723 NotebookApp] Notebook unit-project/project-1/assets/project1-example.ipynb is not trusted
+[I 18:16:41.070 NotebookApp] Kernel started: e9f14cbb-2df7-4b71-a241-c500541e331b
+[I 18:16:42.379 NotebookApp] Adapting to protocol v5.1 for kernel e9f14cbb-2df7-4b71-a241-c500541e331b
+[I 18:17:35.476 NotebookApp] Kernel shutdown: e9f14cbb-2df7-4b71-a241-c500541e331b
+[W 18:17:49.907 NotebookApp] 404 GET /favicon.ico (::1) 21.85ms referer=http://localhost:8888/view/unit-project/project-1/project1-rubric.md
+[W 18:18:44.588 NotebookApp] Notebook unit-project/project-1/assets/project1-example.ipynb is not trusted
+[I 18:18:44.924 NotebookApp] Kernel started: edf0fe32-0c01-4e42-b32e-93ba3f0022f4
+[I 18:18:46.084 NotebookApp] Adapting to protocol v5.1 for kernel edf0fe32-0c01-4e42-b32e-93ba3f0022f4
+[I 18:20:02.180 NotebookApp] Saving file at /unit-project/project-1/starter-code/project1-starter.ipynb
+[I 18:20:45.863 NotebookApp] Saving file at /unit-project/project-1/assets/project1-example.ipynb
+[I 18:26:02.880 NotebookApp] Saving file at /unit-project/project-1/starter-code/project1-starter.ipynb
+[I 18:37:41.974 NotebookApp] Kernel started: 7c867cb5-cd1c-45d5-9458-83c44acba7d8
+[I 18:37:43.114 NotebookApp] Adapting to protocol v5.1 for kernel 7c867cb5-cd1c-45d5-9458-83c44acba7d8
+[W 18:38:02.015 NotebookApp] Notebook classes/03/notebooks/assignment-03-exploratory-data-analysis-answer-key.ipynb is not trusted
+[I 18:38:02.746 NotebookApp] Kernel started: 60462bbf-00b9-4a45-acd6-6f0a3976cefa
+[I 18:38:04.095 NotebookApp] Adapting to protocol v5.1 for kernel 60462bbf-00b9-4a45-acd6-6f0a3976cefa
+[W 18:38:17.041 NotebookApp] Notebook classes/03/notebooks/codealong-03-exploratory-data-analysis-answer-key.ipynb is not trusted
+[I 18:38:20.852 NotebookApp] Kernel started: 63fd6ec3-a360-43e5-9d75-30763b101d60
+[I 18:38:21.959 NotebookApp] Adapting to protocol v5.1 for kernel 63fd6ec3-a360-43e5-9d75-30763b101d60
+[I 18:40:02.229 NotebookApp] Saving file at /unit-project/project-1/starter-code/project1-starter.ipynb
+[I 18:42:02.228 NotebookApp] Saving file at /unit-project/project-1/starter-code/project1-starter.ipynb
+[I 18:44:02.233 NotebookApp] Saving file at /unit-project/project-1/starter-code/project1-starter.ipynb
+[I 18:46:02.235 NotebookApp] Saving file at /unit-project/project-1/starter-code/project1-starter.ipynb
+[I 18:48:02.935 NotebookApp] Saving file at /unit-project/project-1/starter-code/project1-starter.ipynb
+[I 18:50:02.249 NotebookApp] Saving file at /unit-project/project-1/starter-code/project1-starter.ipynb
+[I 18:52:02.953 NotebookApp] Saving file at /unit-project/project-1/starter-code/project1-starter.ipynb
+[I 18:54:02.956 Notebo
+# Please adapt and uncomment the following lines:
+#	name = Shantanu Kumar
+#	email = Shantanu@Shantanus-MacBook-Pro-2.local
